@@ -1,0 +1,5 @@
+<li name={{row._id}}>
+    <small class="text-muted">{{row.student}}</small><br>{{row.quote}}
+    <button ng-click="deleteQuote($event)" class="btn btn-danger btn-sm col-2"  name={{row._id}} value="delete">Delete</button>
+    <button class="btn btn-success btn-sm col-2" type="submit" name="button" value="save">Save</button>
+</li>

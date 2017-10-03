@@ -1,0 +1,25 @@
+{
+  "name": "testangular",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andriy <andy25771@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-loader": "^1.6.6",
+    "angular-mocks": "^1.6.6",
+    "html5-boilerplate": "^6.0.1",
+    "bootstrap": "^3.3.7"
+  }
+}
