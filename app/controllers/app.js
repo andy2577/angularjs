@@ -7,6 +7,29 @@ app.controller('Eneida', function($scope, $http) {
         $scope.poem = response.data;
     });
 
+    $scope.editQuote = function(event) {
+        let id = event.target.name;
+        let edit = $scope.poem.find(function(element){
+            return element._id == id;
+        });
+        //console.log(edit.quote);
+        var req = {
+            method: 'PUT',
+            url: 'http://localhost:3000',
+            headers: {
+                "Content-Type": "application/json;charset=utf-8"
+            },
+            data: {
+                id: id,
+                quote: edit.quote
+            }
+        }
+//         console.log(req);
+        $http(req).then(function(response) {
+            $scope.poem = response.data;
+        });
+    }
+
     $scope.deleteQuote = function(event) {
         let id = event.target.name;
         var req = {
@@ -19,7 +42,7 @@ app.controller('Eneida', function($scope, $http) {
                 id: id
             }
         }
-        console.log(req);
+        //console.log(req);
         $http(req).then(function(response) {
             $scope.poem = response.data;
         });
@@ -35,7 +58,7 @@ app.controller('Eneida', function($scope, $http) {
             },
             data: $scope.quote
         }
-        console.log(req);
+        //console.log(req);
         $http(req).then(function(response) {
             $scope.poem = response.data;
         });

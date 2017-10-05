@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html ng-app="eneida">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ЕнеЇда</title>
-    <!-- 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script> -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" -->
-    <!-- crossorigin="anonymous"></script> -->
-    <script src="./bower_components/angular/angular.js"></script>
-    <script src="./bower_components/angular-route/angular-route.js"></script>
-    <script src="./controllers/app.js"></script>
-    <script src="./js/index.js"></script>
-</head>
-
-<body class="container">
-    <h1>ЕнеЇда</h1>
-    <div ng-controller="Eneida">
-        <ul class="list-unstyled">
-            <show-row ng-repeat="row in poem"></show-row>
-        </ul>
-        <!-- register form-->
-        <form>
-            <div class="form-group">
-                <label for="student">Name:</label>
-                <input ng-model="quote.name" class="form-control" type="text" placeholder="Enter Student Name">
-                <label for="quote">Quote:</label>
-                <input ng-model="quote.quote" class="form-control" type="text" placeholder="Quote"></div>
-            <button class="btn btn-primary" ng-click="createQuote()">Submit</button>
-        </form>
-    </div>
-</body>
-
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ЕнеЇда</title>
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/angular/angular.js"></script>
+        <script src="./bower_components/angular-route/angular-route.js"></script>
+        <script src="./controllers/app.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body class="container">
+        <h1>ЕнеЇда</h1>
+        <div ng-controller="Eneida">
+            <ul class="list-unstyled">
+                <show-row ng-repeat="row in poem"></show-row>
+            </ul>
+            <!-- register form-->
+            <form>
+                <div class="form-group">
+                    <label for="student">Name:</label>
+                    <input ng-model="quote.student" class="form-control" type="text" placeholder="Enter Student Name">
+                    <label for="quote">Quote:</label>
+                    <input ng-model="quote.quote" class="form-control" type="text" placeholder="Quote">
+                </div>
+                <button class="btn btn-primary" ng-click="createQuote()">Submit</button>
+            </form>
+        </div>
+    </body>
 </html>
